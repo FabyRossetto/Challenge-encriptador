@@ -12,17 +12,22 @@ const btnCopiar = document.querySelector(".btn-copiar");
 botonEncriptar.onclick = encriptar;
 botonDesencriptar.onclick = desencriptar;
 
+// eventos táctiles
+botonEncriptar.addEventListener("touchstart", encriptar);
+botonDesencriptar.addEventListener("touchstart", desencriptar);
+
 function encriptar() {
     ocultarAdelante();
     var cajaTexto = recuperarTexto();
     resultado.textContent = encriptarTexto(cajaTexto);
-   
+    btnCopiar.classList.remove("ocultar");
 }
 
 function desencriptar() {
     ocultarAdelante();
     var cajaTexto = recuperarTexto();
     resultado.textContent = desencriptarTexto(cajaTexto);
+    btnCopiar.classList.remove("ocultar");
 }
 
 function recuperarTexto() {
@@ -39,7 +44,7 @@ function ocultarAdelante() {
 
 
 function encriptarTexto(mensaje) {
-    var texto = mensaje;
+    var texto = mensaje.toLowerCase();
     var textoFinal = "";
 
     for (var i = 0; i < texto.length; i++) {
@@ -61,7 +66,7 @@ function encriptarTexto(mensaje) {
 }
 
 function desencriptarTexto(mensaje) {
-    var texto = mensaje;
+    var texto = mensaje.toLowerCase() ;
     var textoFinal = "";
 
     for (var i = 0; i < texto.length; i++) {
