@@ -9,11 +9,6 @@ body {
     background-color: #f4f4fc;
 }
 
-header {
-    width: 100%;
-    height: 70px;
-}
-
 .logo {
     padding-top: 10px;
     margin-left: 10px;
@@ -31,9 +26,8 @@ main {
 
 .contenedor-texto {
     position: absolute;
-    left: 200px;
+    left: 150px;
     top: 100px;
-    padding-left: 100px;
     width: 1080px;
     height: 600px;
 
@@ -103,18 +97,15 @@ main {
     display: block;
     position: relative;
     width: 400px;
-    height: 940px;
+    height: 850px;
     right: 25px;
     padding-right: 20px;
     background-color: #ffffff;
     box-sizing: border-box;
     border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0, 50);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.5);
 }
 
-.texto-encriptado {
-    margin-left: 0%
-}
 
 .contenedor-fondo {
     position: absolute;
@@ -151,7 +142,7 @@ main {
     position: absolute;
     bottom: 410px;
     width: 320px;
-    height: 450px;
+    height: 400px;
     padding: 0;
     box-sizing: border-box;
     margin-left: 25px;
@@ -166,9 +157,7 @@ main {
     display: flex;
     position: absolute;
     bottom: 400px;
-    top: 700px;
-
-    padding-left: 40px;
+    
 }
 
 .btn-copiar {
@@ -179,19 +168,20 @@ main {
     color: #0A3871;
     cursor: pointer;
     height: 67px;
-    right: 4px;
+    right: 15px;
     top: 100px;
     position: relative;
     width: 328px;
     font-size: 20px;
     font-weight: 400;
+    margin-left: auto;
 }
 
 .ocultar {
     display: none;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1025px) {
     body {
         margin: 10px;
     }
@@ -234,7 +224,8 @@ main {
 
     .texto-encriptado {
         height: 200px;
-        right: 0%;
+        right:0
+        
     }
 
     .texto-encriptado,
@@ -264,9 +255,10 @@ main {
 
     .boton-copiar {
         position: relative;
-        top: 300px;
+        top: 600px;
+       
         background-color: none;
-        padding-left: 200px;
+        
     }
 
     .btn-copiar {
@@ -274,7 +266,16 @@ main {
     }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width:430px) {
+    .texto-encriptado{
+        height: 200px;
+        width: calc(100% - 40px);
+        left: 12px;
+        
+    }
+    #texto-a-encriptar{
+        padding-left:8%;
+    }
     .btn-encriptar {
         margin-bottom: 20px;
             }
